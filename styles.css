@@ -1,0 +1,565 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0a0a0a;
+    color: #fff;
+}
+
+.secao {
+    padding: 100px 0;
+    margin: 0 50px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid #222;
+    z-index: 5;
+}
+
+ul {
+    display: flex;
+    gap: 70px;
+    list-style: none;
+}
+
+li a {
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #fff;
+    position: relative;
+    transition: .3s ease;
+}
+
+li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: steelblue;
+    transition: width .3s ease;
+}
+
+li a:hover {
+    color: steelblue;
+}
+
+li a:hover::after {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+header .botao-abrir-menu {
+    display: none;
+}
+
+header .menu-mobile {
+    display: none;
+}
+
+.principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 80px;
+    min-height: 100vh;
+    flex-wrap: wrap-reverse;
+}
+
+.principal div h1 {
+    font-size: 80px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -3px;
+}
+
+.principal div h1 span {
+    background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.principal div p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    max-width: 500px;
+    color: #bbb;
+}
+
+.principal div .botao {
+    display: inline-block;
+    padding: 15px 30px;
+    background-image: linear-gradient(to bottom, rgb(25, 88, 139), steelblue);
+    color: aliceblue;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.principal .conteudo-img-perfil .moldura {
+    width: 400px;
+    height: 600px;
+    margin: 20px;
+    overflow: hidden;
+    border: 3px solid steelblue;
+    border-radius: 9999px;
+    background: linear-gradient(to left, #b3c6c9, #95a5a4);
+    box-shadow: 0 0 8px #007bff;
+
+}
+
+.principal .conteudo-img-perfil .moldura img {
+    width: 100%;
+    height: auto;
+}
+
+.titulo-secao {
+    font-size: 42px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.titulo-secao::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 100px;
+    height: 4px;
+    background-image: linear-gradient(to left, turquoise, steelblue, rebeccapurple);
+}
+
+.grade-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-projetos {
+    background: #161616;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.card-projetos:hover {
+    transform: translateY(-8px);
+}
+
+.img-projeto {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.info-projeto {
+    padding: 20px;
+}
+
+.info-projeto h3 {
+    margin-bottom: 10px;
+    background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.info-projeto p {
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.info-projeto a {
+    color: steelblue;
+    font-weight: 500;
+}
+
+.sobre {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.sobre .sobre-img {
+    flex: 1 1 200px;
+}
+
+.img-sobre {
+    width: 100%;
+    background-color: #161616;
+    border-radius: 10px;
+}
+
+.sobre .conteudo-sobre {
+    flex: 1 1 450px;
+}
+
+.conteudo-sobre h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.conteudo-sobre p {
+    margin-bottom: 20px;
+    color: #bbb;
+}
+
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.tag-habilidades {
+    background-color: rgba(77, 124, 254, 0.2);
+    color: turquoise;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.secao .botoes-contato {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.secao .botoes-contato .botao-contato {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-weight: 500;
+    min-width: 160px;
+}
+
+.secao .botoes-contato .botao-contato i {
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.secao .botoes-contato .botao-contato span {
+    color: #fff;
+}
+
+.whatsapp {
+    background: #25d366;
+}
+
+.email {
+    background: #ea4335;
+}
+
+.linkedin {
+    background: #0077b5;
+}
+
+.github {
+    background-color: #333;
+}
+
+footer {
+    padding: 20px 5%;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.efeito-cursor {
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+
+.efeito-cursor:hover {
+    transform: translateY(-5px);
+}
+
+.cursor {
+    pointer-events: none;
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgba(77, 124, 254, 0.5);
+    z-index: 99;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1551px) {
+    .principal {
+        margin: 0 30px;
+    }
+}
+
+@media screen and (max-width: 1501px) {
+    header {
+        justify-content: center;
+    }
+
+    .principal {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .principal div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .principal .conteudo-img-perfil .moldura {
+        width: 300px;
+        height: auto;
+    }
+
+    .titulo-secao {
+        text-align: center;
+    }
+
+    .titulo-secao::after {
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+@media screen and (max-width: 1061px) {
+    .principal .conteudo-img-perfil .moldura {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .principal div h1 {
+        font-size: 65px;
+    }
+}
+
+@media screen and (max-width: 608px) {
+    header {
+        height: 7%;
+        padding: 2% 70px;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    header .botao-abrir-menu {
+        display: block;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    header .botao-abrir-menu i {
+        font-size: 1.3rem;
+        transition: .2s linear;
+    }
+
+    header .botao-abrir-menu i:hover {
+        color: steelblue;
+        transform: scale(1.2);
+    }
+
+    header .menu-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #0a0a0a;
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid #222;
+        z-index: 5;
+        overflow: hidden;
+        transition: .3s linear;
+        height: 0vh;
+    }
+
+    header .menu-mobile .mobile-nav ul {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header .menu-mobile .mobile-nav ul li {
+        padding: 8px 10px;
+    }
+
+    header .menu-mobile .mobile-nav ul li a::after {
+        display: none;
+    }
+
+    .principal .conteudo-img-perfil .moldura {
+        width: 40%;
+    }
+
+    .mascara-menu-mobile {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 4;
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 581px) {
+    header .menu-mobile .mobile-nav ul li {
+        padding: 5px 10px;
+    }
+
+    .principal div h1 {
+        font-size: 55px;
+    }
+
+    .principal .conteudo-img-perfil .moldura {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .principal div h1 {
+        font-size: 50px;
+    }
+
+    .principal div p {
+        font-size: 18px;
+    }
+
+    .titulo-secao {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 1180px) and (orientation: landscape) {
+    header {
+        padding: 1.5% 70px;
+    }
+    
+    .principal div h1 {
+        font-size: 65px;
+    }
+    
+    .principal .conteudo-img-perfil .moldura {
+        width: 17%;
+    }
+}
+
+@media screen and (max-width: 1040px) and (orientation: landscape) {
+    .principal div h1 {
+        font-size: 55px;
+        margin: 0 0 10px;
+    }
+
+    .principal div {
+        width: 750px;
+    }
+
+    .principal div p {
+        max-width: 550px;
+        margin: 0 0 20px;
+    }
+
+    .principal .conteudo-img-perfil .moldura {
+        width: 13%;
+    }
+}
+
+@media screen and (max-width: 962px) and (orientation: landscape) {
+    header ul li a{
+        font-size: 1rem;
+    }
+
+    .principal div h1 {
+        font-size: 45px;
+    }
+
+    .principal div p {
+        font-size: 16px;
+    }
+
+    .principal div .botao {
+        padding: 10px 20px;
+    }
+
+    .principal .conteudo-img-perfil .moldura {
+        margin: 10px;
+        width: 12%;
+    }
+
+    .titulo-secao {
+        font-size: 36px;
+    }
+
+    .sobre .conteudo-sobre h2 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 896px) and (orientation: landscape) {
+    .principal .conteudo-img-perfil .moldura {
+        width: 10%;
+    }
+    
+    .principal div {
+        width: 800px;
+    }
+    
+    .principal div p {
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-width: 852px) and (orientation: landscape) {
+    .principal div h1 {
+        margin-bottom: 5px;
+    }
+
+    .principal div p {
+        margin-bottom: 10px;
+    }
+    
+    .principal .conteudo-img-perfil .moldura {
+        width: 8%;
+        margin: 5px;
+    }
+}
