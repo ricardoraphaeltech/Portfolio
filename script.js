@@ -1,9 +1,9 @@
-const cursor = document.querySelector(".cursor");
+// const cursor = document.querySelector(".cursor");
 
-document.addEventListener("mousemove", function(info){
-    cursor.style.left = info.clientX + "px"
-    cursor.style.top = info.clientY + "px"
-});
+// document.addEventListener("mousemove", function(info){
+//     cursor.style.left = info.clientX + "px"
+//     cursor.style.top = info.clientY + "px"
+// });
 
 /* Lógica de Programação 
     [X] Saber quando o usuário clicou no botão
