@@ -30,7 +30,7 @@ const icone = document.getElementById('icone')
 botaoMenu.addEventListener('click', function() {
     // Verifica qual ícone está atualmente
     if (icone.classList.contains('fa-bars')) {
-        // Se for um icone fa-bars
+        // Remove o ícone fa-bars
         icone.classList.remove('fa-bars')
         // Troca pelo ícone fa-xmark
         icone.classList.add('fa-xmark')
