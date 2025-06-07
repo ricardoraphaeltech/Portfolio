@@ -186,7 +186,7 @@ header .menu-mobile {
 
 .info-projeto h3 {
     margin-bottom: 10px;
-    background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
+    background-image: linear-gradient(to bottom, rebeccapurple, #4682b4, turquoise);
     color: black;
     background-clip: text;
     -webkit-background-clip: text;
