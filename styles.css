@@ -21,9 +21,9 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    padding: 30px 70px;
+    padding: 15px 70px;
     position: fixed;
     top: 0;
     left: 0;
@@ -32,6 +32,12 @@ header {
     backdrop-filter: blur(5px);
     border-bottom: 1px solid #222;
     z-index: 5;
+    gap: 70px;
+}
+
+.logo-portfolio {
+    width: 50px;
+    cursor: pointer;
 }
 
 ul {
@@ -286,6 +292,10 @@ header .menu-mobile {
     background: #ea4335;
 }
 
+.curriculo {
+    background: #7D4BF8;
+}
+
 .linkedin {
     background: #0077b5;
 }
@@ -298,6 +308,11 @@ footer {
     padding: 20px 5%;
     text-align: center;
     border-top: 1px solid #222;
+}
+
+.logo-footer {
+    width: 80px;
+    margin-bottom: 20px;
 }
 
 .efeito-cursor {
@@ -374,6 +389,11 @@ footer {
     header {
         height: 7%;
         padding: 2% 70px;
+        gap: 0;
+    }
+
+    .logo-portfolio {
+        display: none;
     }
 
     header ul {
@@ -453,6 +473,12 @@ footer {
 
     .principal .conteudo-img-perfil .moldura {
         width: 35%;
+    }
+}
+
+@media screen and (max-width: 418px) {
+    .grade-projetos {
+        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
     }
 }
 
