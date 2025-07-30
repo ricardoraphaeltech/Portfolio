@@ -35,8 +35,9 @@ header {
     gap: 70px;
 }
 
-.logo-portfolio {
+header .logo-portfolio {
     width: 50px;
+    height: auto;
     cursor: pointer;
 }
 
@@ -93,7 +94,7 @@ header .menu-mobile {
     margin-left: 30px;
     margin-right: 80px;
     min-height: 100vh;
-    flex-wrap: wrap-reverse;
+    gap: 20px;
 }
 
 .principal div h1 {
@@ -128,9 +129,9 @@ header .menu-mobile {
     border-radius: 5px;
 }
 
-.principal .conteudo-img-perfil .moldura {
+.principal .moldura {
     width: 400px;
-    height: 600px;
+    height: auto;
     margin: 20px;
     overflow: hidden;
     border: 3px solid steelblue;
@@ -140,7 +141,7 @@ header .menu-mobile {
 
 }
 
-.principal .conteudo-img-perfil .moldura img {
+.principal .moldura img {
     width: 100%;
     height: auto;
 }
@@ -346,21 +347,13 @@ footer {
         justify-content: center;
     }
 
-    .principal {
-        flex-direction: column-reverse;
-        justify-content: center;
-    }
-
     .principal div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        width: 750px;
     }
 
-    .principal .conteudo-img-perfil .moldura {
-        width: 300px;
-        height: auto;
+    .principal .moldura {
+        width: 400px;
+        height: 600;
     }
 
     .titulo-secao {
@@ -373,16 +366,39 @@ footer {
     }
 }
 
-@media screen and (max-width: 1061px) {
-    .principal .conteudo-img-perfil .moldura {
+@media screen and (max-width: 962px) {
+    .principal {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .principal div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .principal .moldura {
         width: 250px;
+        height: auto;
     }
 }
 
 @media screen and (max-width: 768px) {
+    .principal div {
+        width: 90%;
+    }
+
     .principal div h1 {
         font-size: 65px;
     }
+
+    .principal .moldura {
+        width: 245px;
+        height: auto;
+    } 
 }
 
 @media screen and (max-width: 608px) {
@@ -448,10 +464,6 @@ footer {
         display: none;
     }
 
-    .principal .conteudo-img-perfil .moldura {
-        width: 40%;
-    }
-
     .mascara-menu-mobile {
         position: fixed;
         inset: 0;
@@ -459,6 +471,11 @@ footer {
         height: 100vh;
         z-index: 4;
         visibility: hidden;
+    }
+
+    .principal .moldura {
+        width: 220px;
+        height: auto;
     }
 }
 
@@ -471,8 +488,9 @@ footer {
         font-size: 55px;
     }
 
-    .principal .conteudo-img-perfil .moldura {
-        width: 35%;
+    .principal .moldura {
+        width: 170px;
+        height: auto;
     }
 }
 
@@ -491,8 +509,24 @@ footer {
         font-size: 18px;
     }
 
+    .principal .moldura {
+        width: 120px;
+        height: auto;
+    }
+
     .titulo-secao {
         font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 393px) {
+    .principal {
+        gap: 0;
+    }
+
+    .principal .moldura {
+        width: 100px;
+        height: auto;
     }
 }
 
@@ -504,20 +538,29 @@ footer {
     .principal div h1 {
         font-size: 65px;
     }
-    
-    .principal .conteudo-img-perfil .moldura {
-        width: 17%;
+
+    .principal .moldura {
+        width: 300px;
+        height: auto;
     }
 }
 
 @media screen and (max-width: 1040px) and (orientation: landscape) {
-    .principal div h1 {
-        font-size: 55px;
-        margin: 0 0 10px;
+    .principal {
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0 30px;
     }
 
     .principal div {
-        width: 750px;
+        align-items: flex-start;
+        text-align: start;
+        width: 600px;
+    }
+
+    .principal div h1 {
+        font-size: 55px;
+        margin: 0 0 10px;
     }
 
     .principal div p {
@@ -525,14 +568,28 @@ footer {
         margin: 0 0 20px;
     }
 
-    .principal .conteudo-img-perfil .moldura {
-        width: 13%;
+    .principal .moldura {
+        width: 200px;
+        height: auto;
+        margin: 0;
     }
 }
 
 @media screen and (max-width: 962px) and (orientation: landscape) {
+    header .logo-portfolio {
+        width: 40px;
+    }
+    
+    header {
+        padding: 1% 70px;
+    }
+
     header ul li a{
         font-size: 1rem;
+    }
+
+    .principal div {
+        width: 450px;
     }
 
     .principal div h1 {
@@ -547,11 +604,6 @@ footer {
         padding: 10px 20px;
     }
 
-    .principal .conteudo-img-perfil .moldura {
-        margin: 10px;
-        width: 12%;
-    }
-
     .titulo-secao {
         font-size: 36px;
     }
@@ -559,19 +611,19 @@ footer {
     .sobre .conteudo-sobre h2 {
         font-size: 26px;
     }
+
+    .principal .moldura {
+        width: 175px;
+        height: auto;
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 896px) and (orientation: landscape) {
-    .principal .conteudo-img-perfil .moldura {
-        width: 10%;
-    }
-    
-    .principal div {
-        width: 800px;
-    }
-    
-    .principal div p {
-        max-width: 700px;
+    .principal .moldura {
+        width: 130px;
+        height: auto;
+        margin: 0;
     }
 }
 
@@ -582,10 +634,5 @@ footer {
 
     .principal div p {
         margin-bottom: 10px;
-    }
-    
-    .principal .conteudo-img-perfil .moldura {
-        width: 8%;
-        margin: 5px;
     }
 }
