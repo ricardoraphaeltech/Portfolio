@@ -24,6 +24,7 @@
   O o projeto apresenta um menu de navegação muito intuitivo para o usuário poder navegar entre as seções. Sinta-se a vontade para 
   conferir meu portfólio.
 </p>
+<p>Acesse o projeto pelo <a href="https://ricardoraphaeltech.github.io/Portfolio/">Link</a></p>
 
 ---
 
