@@ -67,4 +67,4 @@
 
 ---
 
-<p>Feito com ❤️ por Ricardo Raphael 👋🏽 [Entre em contato!](https://www.linkedin.com/in/ricardoapraphael/)</p>
+<p>Desenvolvido por Ricardo Raphael 👋🏽 [Entre em contato!](https://www.linkedin.com/in/ricardoapraphael/)</p>
